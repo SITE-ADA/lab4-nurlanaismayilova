@@ -8,14 +8,6 @@ import java.util.*;
 @Repository
 public class ProductRepositoryImpl implements ProductRepository{
 
-    /*    Use Map<UUID, Product> for in-memory storage (HashMap)
-    In save() method auto-generate UUID if null, then store in the map
-    findById() must return Optional<Product>
-    findAll() returns a new ArrayList of values
-    deleteById() removes from the map
-    existsById() checks if the map contains the key
-*/
-
     Map<UUID, Product> storage = new HashMap<>();
 
     public Product save(Product product){
