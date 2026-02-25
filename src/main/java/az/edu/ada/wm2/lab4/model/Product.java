@@ -8,19 +8,20 @@ import java.util.UUID;
 
 public class Product {
 
-    UUID id;
-    String productName;
-    BigDecimal price;
-    LocalDate expirationDate;
+    private UUID id;
+    private String productName;
+    private BigDecimal price;
+    private LocalDate expirationDate;
+
+    public Product(){}
 
     public Product(UUID id, String productName, BigDecimal price, LocalDate expirationDate) {
-        this.id = UUID.randomUUID();
+        this.id = id;
         this.productName = productName;
         this.price = price;
         this.expirationDate = expirationDate;
     }
     public Product(String productName, BigDecimal price, LocalDate expirationDate) {
-        this.id = UUID.randomUUID();
         this.productName = productName;
         this.price = price;
         this.expirationDate = expirationDate;
